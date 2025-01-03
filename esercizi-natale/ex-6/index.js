@@ -15,3 +15,31 @@
 */
 
 const palline = ["rosso", "blu", "rosso", "verde", "rosso", "giallo", "blu"];
+
+function quantePalline(palline){
+  let pallineRosse = 0;
+  let pallineBlu = 0;
+  let pallineVerdi = 0; 
+  let pallineGialle = 0;
+  for(let pallina of palline){
+    if(pallina === 'rosso'){
+      pallineRosse++
+    } else if(pallina === 'blu'){
+      pallineBlu++
+    } else if(pallina === 'verde'){
+      pallineVerdi++
+    } else if(pallina === 'giallo'){
+      pallineGialle++
+    } else{
+      console.log('Non ci sono palline rosse, blu, verdi o gialle!');
+    }
+  }
+  return   {
+    "rosso": pallineRosse,
+    "blu": pallineBlu,
+    "verde": pallineVerdi,
+    "giallo": pallineGialle
+  }
+}
+
+console.log(quantePalline(palline));
