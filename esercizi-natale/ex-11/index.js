@@ -10,3 +10,10 @@
 */
 
 const bambini = ["Renato", "Gino", "Cicibubu"];
+
+const consegnaRegali = bambini.map(bambino =>{
+  return bambino + '🎁'
+})
+
+console.log(consegnaRegali);
+
