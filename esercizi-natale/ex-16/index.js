@@ -21,3 +21,10 @@ const regali = [
   { nome: "Libretto", quantita: 12 },
   { nome: "Cicibubu Portatili", quantita: 7 }
 ];
+
+function controllaScorte(array, quantita) {
+  return array.every(element => element.quantita >= quantita);
+}
+
+console.log(controllaScorte(regali, 7));
+
