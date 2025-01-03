@@ -33,3 +33,13 @@ const citta = [
   "Candynia",
   "Luciaville"
 ];
+
+function aggiungiCitta(array, element){
+  if(!array.includes(element)){
+    array.push(element)
+  }
+  return array
+}
+
+console.log(aggiungiCitta(citta,'Cicibubulandia'));
+console.log(aggiungiCitta(citta,'Panettoneville'));
