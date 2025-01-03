@@ -11,3 +11,13 @@
 */
 
 const velocitaRenne = [12, 1, 7, 10, 16, 5];
+
+const renneStanche = velocitaRenne.map(renna =>{
+  if(renna < 10){
+    return false
+  } else { 
+    return true
+  }
+})
+
+console.log(renneStanche);
