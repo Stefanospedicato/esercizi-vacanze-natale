@@ -52,3 +52,27 @@ const letterine = [
   "Spero in un Natale pieno di cioccolata.",
   "So che non esisti. Gne."
 ];
+
+const getLettereBambiniEducati = letterine.filter(letterina => letterina.includes('Caro Babbo Natale'))
+
+console.log(getLettereBambiniEducati);
+
+function smistaLettereBambini(letterine) {
+  const output = {
+    educati: [],
+    maleducati: []
+  };
+
+  letterine.forEach(letterina => {
+    if (letterina.includes('Caro Babbo Natale')) {
+      output.educati.push(letterina);
+    } else {
+      output.maleducati.push(letterina);
+    }
+  });
+
+  return output;
+}
+
+console.log(smistaLettereBambini(letterine));
+
