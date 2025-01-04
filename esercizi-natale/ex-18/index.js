@@ -23,3 +23,28 @@
 */
 
 const addobbiSuAlbero = ["pallina", "pallina", "pallina", "stella"];
+
+function bilanciaAlbero(array){
+  let pallinaCounter = 0
+  let stellaCounter = 0
+  array.forEach(element => {
+    if(element === 'pallina'){
+      pallinaCounter++
+    } else if(element === 'stella'){
+      stellaCounter++
+    }
+  })
+  const differenza = Math.abs(pallinaCounter - stellaCounter)
+    if(pallinaCounter > stellaCounter){
+      for(let i = 0 ; i < differenza ; i++){
+        array.push('stella')
+      }
+    } else if(pallinaCounter < stellaCounter){
+      for(let i = 0 ; i < differenza ; i++){
+      array.push('pallina')
+      }
+    }
+  return array
+}
+
+console.log(bilanciaAlbero(addobbiSuAlbero));
