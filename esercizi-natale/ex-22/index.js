@@ -4,3 +4,16 @@
   
   Output: (vedi esempio.png)
 */
+
+const listaAuguri = document.getElementById('listaAuguri')
+const button = document.getElementById('aggiungiAugurio')
+const message = document.getElementById('messaggioAuguri')
+
+button.addEventListener('click',()=>{
+  if(message.value){
+    listElement = document.createElement('li');
+    listElement.textContent = message.value;
+    listaAuguri.appendChild(listElement)
+    message.value=''
+  }
+})
