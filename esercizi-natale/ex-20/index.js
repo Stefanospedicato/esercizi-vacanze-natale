@@ -3,3 +3,7 @@
   Aggiorna il valore ogni secondo. 
   Inietta i dati dinamicamente nel DOM.
 */
+
+const countdown = document.querySelector('countdown-container')
+
+
